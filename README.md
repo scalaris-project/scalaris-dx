@@ -15,7 +15,7 @@ Scalaris DX requires the [Scalaris wallet](https://github.com/scalaris-project/s
 ## Build and run locally:
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
-
+1. Node version v12.18.3
 1. Install dependencies: `npm install`
 1. Start the dev server: `npm start`
     * To start with the Mock (in-memory) API: `npm start -- -e="mock"`.
