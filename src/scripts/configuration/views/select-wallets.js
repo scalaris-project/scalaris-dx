@@ -358,7 +358,7 @@ class SelectWallets extends RouterView {
 
     $('.js-blocknetWalletLink').on('click', e => {
       e.preventDefault();
-      remote.shell.openExternal('https://github.com/blocknetdx/blocknet/releases/latest');
+      remote.shell.openExternal('https://github.com/scalaris-project/scalaris/releases/latest');
     });
 
   }
