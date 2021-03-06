@@ -49,7 +49,7 @@ class ConfigurationComplete extends RouterView {
                     <p style="${styles.p}"><strong style="margin-right: 10px;">3)</strong> ${Localize.text('Select RESTART to restart Scalaris DX and begin trading.','configurationWindowComplete')}</p>
                   `
                 }
-                <div class="main-area" style="background-color:#0e2742;overflow-y:auto;"></div>
+                <div class="main-area" style="background-color:rgba(0,0,0,0.3);overflow-y:auto;"></div>
                 <div id="js-buttonContainer" class="button-container">
                   <button id="js-backBtn" type="button" class="gray-button">${Localize.text('Close','configurationWindowComplete').toUpperCase()}</button>
                   <button id="js-continueBtn" type="button">${Localize.text('Restart','configurationWindowComplete').toUpperCase()}</button>

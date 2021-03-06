@@ -20,7 +20,7 @@ class Finish extends RouterView {
 
     const styles = {
       p: 'margin-top:0;padding-top:0;padding-left:10px;padding-right:10px;margin-bottom:20px;',
-      mainArea: 'margin-top:-10px;padding-top:0;background-color:#0e2742;overflow-y:auto;'
+      mainArea: 'margin-top:-10px;padding-top:0;background-color:rgba(0, 0, 0, 0.3);overflow-y:auto;'
     };
 
     const quick = state.get('quickSetup');
@@ -105,7 +105,7 @@ class Finish extends RouterView {
               .filter(w => addingWallets ? addAbbrToVersion.has(w.abbr) : updatingWallets ? updateAbbrToVersion.has(w.abbr) : !skipList.has(w.abbr))
               .filter(w => addingWallets ? w.versions.includes(addAbbrToVersion.get(w.abbr)) : updatingWallets ? w.versions.includes(updateAbbrToVersion.get(w.abbr)) : selectedWallets.has(w.versionId))
               .map(w => {
-                if(updatingWallets && w.abbr === 'BLOCK') {
+                if(updatingWallets && w.abbr === 'SCA') {
                   return w.set({
                     username: ipcRenderer.sendSync('getUser'),
                     password: ipcRenderer.sendSync('getPassword')
@@ -147,16 +147,16 @@ class Finish extends RouterView {
 
             if(addingWallets) {
               const block = wallets
-                .find(w => w.abbr === 'BLOCK');
+                .find(w => w.abbr === 'SCA');
               addConfs(filtered, block.directory);
             } else if(updatingWallets) {
               const block = wallets
-                .find(w => w.abbr === 'BLOCK');
+                .find(w => w.abbr === 'SCA');
               updateConfs(filtered, block.directory);
             } else {
               saveConfs(filtered);
               const block = filtered
-                .find(w => w.abbr === 'BLOCK');
+                .find(w => w.abbr === 'SCA');
               const { username, password } = block;
               const port = state.get('rpcPort');
               const rpcIP = state.get('rpcIP');
@@ -180,7 +180,7 @@ class Finish extends RouterView {
               filtered = filtered
                 .map(w => {
                   if(state.get('generateCredentials')) {
-                    if(updatingWallets && w.abbr === 'BLOCK') {
+                    if(updatingWallets && w.abbr === 'SCA') {
                       return w.set({
                         username: ipcRenderer.sendSync('getUser'),
                         password: ipcRenderer.sendSync('getPassword')
@@ -205,12 +205,12 @@ class Finish extends RouterView {
                   }
                   selected = selected.add(versionId);
                 }
-                const block = state.get('wallets').find(w => w.abbr === 'BLOCK');
+                const block = state.get('wallets').find(w => w.abbr === 'SCA');
                 if(addingWallets) {
                   addConfs(filtered, block.directory);
                 } else { // updating wallets
                   updateConfs(filtered, block.directory);
-                  if(filtered.some(w => w.abbr === 'BLOCK')) {
+                  if(filtered.some(w => w.abbr === 'SCA')) {
                     const port = state.get('rpcPort');
                     const rpcIP = state.get('rpcIP');
                     const username = block.username || ipcRenderer.sendSync('getUser');
@@ -226,7 +226,7 @@ class Finish extends RouterView {
 
             if(!addingWallets && !updatingWallets) {
               const block = filtered
-                .find(w => w.abbr === 'BLOCK');
+                .find(w => w.abbr === 'SCA');
               const { username, password } = block;
               const port = state.get('rpcPort');
               const rpcIP = state.get('rpcIP');

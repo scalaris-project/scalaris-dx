@@ -47,7 +47,7 @@ state.set('sidebarItems', [
   // {sidebarText: 'FAQ', title: 'FAQ'},
   // {sidebarText: 'Tutorials', title: 'TUTORIALS'},
   // {sidebarText: 'Troubleshooting', title: 'TROUBLESHOOTING'},
-  {sidebarText: Localize.text('Powered by Scalaris', 'informationWindow'), title: Localize.text('Scalaris Protocol', 'informationWindow').toUpperCase()}
+  {sidebarText: Localize.text('Powered by Scalaris', 'informationWindow'), title: Localize.text('Blocknet Protocol', 'informationWindow').toUpperCase()}
 ]);
 
 

@@ -103,7 +103,7 @@ class XBridgeConf {
 
   add(wallet) {
     const { abbr, directory, xBridgeConf, username, password } = wallet;
-    if(abbr === 'BLOCK') this._directory = directory;
+    if(abbr === 'SCA') this._directory = directory;
     const confStr = ipcRenderer.sendSync('getBridgeConf', xBridgeConf);
     if(!confStr) throw new Error(`${xBridgeConf} not found.`);
     const conf = splitConf(confStr);
@@ -255,7 +255,7 @@ const putToXBridgeConf = (wallets, blockDir) => {
     .replace(/\r/g, '')
     .split(/\n/);
   const walletsIdx = split.findIndex(s => /^ExchangeWallets\s*=/.test(s));
-  const walletsRaw = split[walletsIdx].match(/=(.*)$/); // e.g. BLOCK,BTC,LTC or empty
+  const walletsRaw = split[walletsIdx].match(/=(.*)$/); // e.g. SCA,BTC,LTC or empty
   const walletList = !walletsRaw || walletsRaw.length <= 1 ? [] : walletsRaw[1]
     .split(',')
     .map(str => str.trim());

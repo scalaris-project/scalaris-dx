@@ -87,7 +87,7 @@ app-table /deep/ {
   padding-left: 13px;
   padding-right: 13px;
   line-height: 20px;
-  background-color: rgba(1,27,54,0.6);
+  background-color: rgba(0,0,0,0.3);
   //text-align: right;
   font-size: 12px;
   display: flex;
@@ -134,7 +134,7 @@ app-table /deep/ {
 
 .spread {
   font-weight: bold;
-  opacity: .4;
+  opacity: 1;
 }
 .orderbook-own-order {
   //color: rgba(133, 153, 0, 1); // gold hue

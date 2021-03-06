@@ -181,7 +181,7 @@ class ExpertSelectWalletVersions extends RouterView {
           $icon.removeClass('fa-angle-down');
 
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0,0,0,0.3);width:${width}px;max-height:162px;overflow-y:auto;">
               ${versions.map(v => `<div class="js-dropdownMenuItem dropdown-button" data-version="${v}"><div>${v}</div></div>`).join('')}
             </div>
           `);

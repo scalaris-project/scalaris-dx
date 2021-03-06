@@ -380,9 +380,9 @@
       "note": ""
     }
   },
-  "Since trading is peer-to-peer, you must have the wallet of each traded asset installed, open, synced, unlocked, and online for the duration of the trade. This also applies to the Scalaris wallet since it's used to facilitate even non-BLOCK orders.": {
+  "Since trading is peer-to-peer, you must have the wallet of each traded asset installed, open, synced, unlocked, and online for the duration of the trade. This also applies to the Scalaris wallet since it's used to facilitate even non-SCA orders.": {
     "mainview": {
-      "val": "Since trading is peer-to-peer, you must have the wallet of each traded asset installed, open, synced, unlocked, and online for the duration of the trade. This also applies to the Scalaris wallet since it's used to facilitate even non-BLOCK orders.",
+      "val": "Since trading is peer-to-peer, you must have the wallet of each traded asset installed, open, synced, unlocked, and online for the duration of the trade. This also applies to the Scalaris wallet since it's used to facilitate even non-SCA orders.",
       "note": ""
     }
   },
@@ -808,9 +808,9 @@
       "note": ""
     }
   },
-  "Buy BLOCK": {
+  "Buy SCA": {
     "navbar": {
-      "val": "Buy BLOCK",
+      "val": "Buy SCA",
       "note": ""
     }
   },
@@ -1318,11 +1318,11 @@
   },
   "Litewallet Setup": {
     "configurationMenu": {
-      "val": "Litewallet Setup",
+      "val": "Litewallet Setup (Not Tested but most work) ",
       "note": ""
     },
     "configurationWindowMenu": {
-      "val": "Litewallet Setup",
+      "val": "Litewallet Setup (Not Tested but most work) ",
       "note": ""
     }
   },
@@ -2050,15 +2050,15 @@
       "note": ""
     }
   },
-  "Scalaris Protocol": {
+  "Blocknet Protocol": {
     "informationWindow": {
-      "val": "Scalaris Protocol",
+      "val": "Blocknet Protocol",
       "note": ""
     }
   },
-  "Scalaris DX is powered by the Scalaris Protocol": {
+  "Scalaris DX is powered by the Blocknet Protocol": {
     "informationWindowScalaris": {
-      "val": "Scalaris DX is powered by the Scalaris Protocol",
+      "val": "Scalaris DX is powered by the Blocknet Protocol",
       "note": ""
     }
   },
@@ -2110,21 +2110,21 @@
       "note": ""
     }
   },
-  "Scalaris is a Proof-of-Stake (PoS) blockchain with a utility token called <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">BLOCK</a>. Unlike other currency-focused blockchains, Scalaris is a service-based blockchain comprised of 3 main components:": {
+  "Scalaris is a Proof-of-Stake (PoS) blockchain with a utility token called <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">SCA</a>. Unlike other currency-focused blockchains, Scalaris is a service-based blockchain comprised of 3 main components:": {
     "informationWindowScalaris": {
-      "val": "Scalaris is a Proof-of-Stake (PoS) blockchain with a utility token called <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">BLOCK</a>. Unlike other currency-focused blockchains, Scalaris is a service-based blockchain comprised of 3 main components:",
+      "val": "Scalaris is a Proof-of-Stake (PoS) blockchain with a utility token called <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">SCA</a>. Unlike other currency-focused blockchains, Scalaris is a service-based blockchain comprised of 3 main components:",
       "note": ""
     }
   },
-  "<strong>XRouter</strong> - Provides the Scalaris Protocol with a communication layer consisting of an inter-blockchain SPV backend that enables the verification of blockchain records without requiring users to download the full blockchain. XRouter allows applications to interface with blockchains on the TCP/IP networking layer, enabling a true Internet of Blockchains.": {
+  "<strong>XRouter</strong> - Provides the Blocknet Protocol with a communication layer consisting of an inter-blockchain SPV backend that enables the verification of blockchain records without requiring users to download the full blockchain. XRouter allows applications to interface with blockchains on the TCP/IP networking layer, enabling a true Internet of Blockchains.": {
     "informationWindowScalaris": {
-      "val": "<strong>XRouter</strong> - Provides the Scalaris Protocol with a communication layer consisting of an inter-blockchain SPV backend that enables the verification of blockchain records without requiring users to download the full blockchain. XRouter allows applications to interface with blockchains on the TCP/IP networking layer, enabling a true Internet of Blockchains.",
+      "val": "<strong>XRouter</strong> - Provides the Blocknet Protocol with a communication layer consisting of an inter-blockchain SPV backend that enables the verification of blockchain records without requiring users to download the full blockchain. XRouter allows applications to interface with blockchains on the TCP/IP networking layer, enabling a true Internet of Blockchains.",
       "note": ""
     }
   },
-  "<strong>XBridge</strong> - Provides the ability to perform trustless atomic swap exchanges between any blockchain that is supported by the Scalaris Protocol via APIs. XBridge allows any application to perform decentralized exchange, opening the door to an ecosystem of decentralized trading services.": {
+  "<strong>XBridge</strong> - Provides the ability to perform trustless atomic swap exchanges between any blockchain that is supported by the Blocknet Protocol via APIs. XBridge allows any application to perform decentralized exchange, opening the door to an ecosystem of decentralized trading services.": {
     "informationWindowScalaris": {
-      "val": "<strong>XBridge</strong> - Provides the ability to perform trustless atomic swap exchanges between any blockchain that is supported by the Scalaris Protocol via APIs. XBridge allows any application to perform decentralized exchange, opening the door to an ecosystem of decentralized trading services.",
+      "val": "<strong>XBridge</strong> - Provides the ability to perform trustless atomic swap exchanges between any blockchain that is supported by the Blocknet Protocol via APIs. XBridge allows any application to perform decentralized exchange, opening the door to an ecosystem of decentralized trading services.",
       "note": ""
     }
   },
@@ -2134,9 +2134,9 @@
       "note": ""
     }
   },
-  "The Scalaris Protocol is designed to maximize interoperability between different blockchains through the use of these components. Just as the internet enabled computers to communicate, the Scalaris Protocol is critical for blockchains to realize full potential.": {
+  "The Blocknet Protocol is designed to maximize interoperability between different blockchains through the use of these components. Just as the internet enabled computers to communicate, the Blocknet Protocol is critical for blockchains to realize full potential.": {
     "informationWindowScalaris": {
-      "val": "The Scalaris Protocol is designed to maximize interoperability between different blockchains through the use of these components. Just as the internet enabled computers to communicate, the Scalaris Protocol is critical for blockchains to realize full potential.",
+      "val": "The Blocknet Protocol is designed to maximize interoperability between different blockchains through the use of these components. Just as the internet enabled computers to communicate, the Blocknet Protocol is critical for blockchains to realize full potential.",
       "note": ""
     }
   },
@@ -2152,9 +2152,9 @@
       "note": ""
     }
   },
-  "<strong>Staking Nodes</strong> - Secures the network by staking BLOCK to verify the blockchain. This service earns 30% of block rewards.": {
+  "<strong>Staking Nodes</strong> - Secures the network by staking SCA to verify the blockchain. This service earns 30% of block rewards.": {
     "informationWindowScalaris": {
-      "val": "<strong>Staking Nodes</strong> - Secures the network by staking BLOCK to verify the blockchain. This service earns 30% of block rewards.",
+      "val": "<strong>Staking Nodes</strong> - Secures the network by staking SCA to verify the blockchain. This service earns 30% of block rewards.",
       "note": ""
     }
   },
@@ -2170,15 +2170,15 @@
       "note": ""
     }
   },
-  "<strong>Staking Nodes</strong> - A Staking Node can be operated with any amount of BLOCK, but staking more BLOCK yields more frequent rewards.": {
+  "<strong>Staking Nodes</strong> - A Staking Node can be operated with any amount of SCA, but staking more SCA yields more frequent rewards.": {
     "informationWindowScalaris": {
-      "val": "<strong>Staking Nodes</strong> - A Staking Node can be operated with any amount of BLOCK, but staking more BLOCK yields more frequent rewards.",
+      "val": "<strong>Staking Nodes</strong> - A Staking Node can be operated with any amount of SCA, but staking more SCA yields more frequent rewards.",
       "note": ""
     }
   },
-  "<strong>Service Nodes</strong> - A Service Node requires 5000 BLOCK.": {
+  "<strong>Service Nodes</strong> - A Service Node requires 5000 SCA.": {
     "informationWindowScalaris": {
-      "val": "<strong>Service Nodes</strong> - A Service Node requires 5000 BLOCK.",
+      "val": "<strong>Service Nodes</strong> - A Service Node requires 5000 SCA.",
       "note": ""
     }
   },
@@ -2188,51 +2188,51 @@
       "note": ""
     }
   },
-  "<a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">BLOCK</a> is the utility token that powers the Scalaris. Fees are paid in BLOCK when using the network and 100% of those fees are distributed to Service Nodes for supporting the network and infrastructure. Normal transaction fees on the network are also paid in BLOCK, but those fees are burned. If seeking to acquire BLOCK, <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/project/exchanges\">there are various options available</a>.": {
+  "<a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">SCA</a> is the utility token that powers the Scalaris. Fees are paid in SCA when using the network and 100% of those fees are distributed to Service Nodes for supporting the network and infrastructure. Normal transaction fees on the network are also paid in SCA, but those fees are burned. If seeking to acquire SCA, <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/project/exchanges\">there are various options available</a>.": {
     "informationWindowScalaris": {
-      "val": "<a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">BLOCK</a> is the utility token that powers the Scalaris. Fees are paid in BLOCK when using the network and 100% of those fees are distributed to Service Nodes for supporting the network and infrastructure. Normal transaction fees on the network are also paid in BLOCK, but those fees are burned. If seeking to acquire BLOCK, <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/project/exchanges\">there are various options available</a>.",
+      "val": "<a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/blockchain/introduction\">SCA</a> is the utility token that powers the Scalaris. Fees are paid in SCA when using the network and 100% of those fees are distributed to Service Nodes for supporting the network and infrastructure. Normal transaction fees on the network are also paid in SCA, but those fees are burned. If seeking to acquire SCA, <a href=\"#\" class=\"text-link js-externalLink\" data-link=\"https://docs.scalaris.info/project/exchanges\">there are various options available</a>.",
       "note": ""
     }
   },
-  "Scalaris involves multiple economic models with respect to the use of the BLOCK token:": {
+  "Scalaris involves multiple economic models with respect to the use of the SCA token:": {
     "informationWindowScalaris": {
-      "val": "Scalaris involves multiple economic models with respect to the use of the BLOCK token:",
+      "val": "Scalaris involves multiple economic models with respect to the use of the SCA token:",
       "note": ""
     }
   },
-  "<strong>Block Rewards</strong> - Scalaris is Proof-of-Stake(PoS) with 1 BLOCK created every minute, of which 30% is awarded to Staking Nodes and 70% to Service Nodes.": {
+  "<strong>Block Rewards</strong> - Scalaris is Proof-of-Stake(PoS) with 1 SCA created every minute, of which 30% is awarded to Staking Nodes and 70% to Service Nodes.": {
     "informationWindowScalaris": {
-      "val": "<strong>Block Rewards</strong> - Scalaris is Proof-of-Stake(PoS) with 1 BLOCK created every minute, of which 30% is awarded to Staking Nodes and 70% to Service Nodes.",
+      "val": "<strong>Block Rewards</strong> - Scalaris is Proof-of-Stake(PoS) with 1 SCA created every minute, of which 30% is awarded to Staking Nodes and 70% to Service Nodes.",
       "note": ""
     }
   },
-  "<strong>Service Fees</strong> - Service Nodes receive 100% of BLOCK fees generated from the use of services on the network, including trades performed via XBridge, interfacing with blockchains via XRouter, and use of microservices via XCloud.": {
+  "<strong>Service Fees</strong> - Service Nodes receive 100% of SCA fees generated from the use of services on the network, including trades performed via XBridge, interfacing with blockchains via XRouter, and use of microservices via XCloud.": {
     "informationWindowScalaris": {
-      "val": "<strong>Service Fees</strong> - Service Nodes receive 100% of BLOCK fees generated from the use of services on the network, including trades performed via XBridge, interfacing with blockchains via XRouter, and use of microservices via XCloud.",
+      "val": "<strong>Service Fees</strong> - Service Nodes receive 100% of SCA fees generated from the use of services on the network, including trades performed via XBridge, interfacing with blockchains via XRouter, and use of microservices via XCloud.",
       "note": ""
     }
   },
-  "<strong>Collateral</strong> - BLOCK is required for collateral to operate a Service Node, as well as to use certain services on the network.": {
+  "<strong>Collateral</strong> - SCA is required for collateral to operate a Service Node, as well as to use certain services on the network.": {
     "informationWindowScalaris": {
-      "val": "<strong>Collateral</strong> - BLOCK is required for collateral to operate a Service Node, as well as to use certain services on the network.",
+      "val": "<strong>Collateral</strong> - SCA is required for collateral to operate a Service Node, as well as to use certain services on the network.",
       "note": ""
     }
   },
-  "<strong>Governance</strong> - Submitting proposals to the network requires a fee to be paid in BLOCK and proposals can only be voted on by Service Nodes.": {
+  "<strong>Governance</strong> - Submitting proposals to the network requires a fee to be paid in SCA and proposals can only be voted on by Service Nodes.": {
     "informationWindowScalaris": {
-      "val": "<strong>Governance</strong> - Submitting proposals to the network requires a fee to be paid in BLOCK and proposals can only be voted on by Service Nodes.",
+      "val": "<strong>Governance</strong> - Submitting proposals to the network requires a fee to be paid in SCA and proposals can only be voted on by Service Nodes.",
       "note": ""
     }
   },
-  "<strong>Transaction Fees</strong> - Transferring funds on the network incurs a transaction fee paid in BLOCK.": {
+  "<strong>Transaction Fees</strong> - Transferring funds on the network incurs a transaction fee paid in SCA.": {
     "informationWindowScalaris": {
-      "val": "<strong>Transaction Fees</strong> - Transferring funds on the network incurs a transaction fee paid in BLOCK.",
+      "val": "<strong>Transaction Fees</strong> - Transferring funds on the network incurs a transaction fee paid in SCA.",
       "note": ""
     }
   },
-  "The utility of the BLOCK token increases the buy pressure on the market, while the reward potential of operating a node reduces sell pressure on the market.": {
+  "The utility of the SCA token increases the buy pressure on the market, while the reward potential of operating a node reduces sell pressure on the market.": {
     "informationWindowScalaris": {
-      "val": "The utility of the BLOCK token increases the buy pressure on the market, while the reward potential of operating a node reduces sell pressure on the market.",
+      "val": "The utility of the SCA token increases the buy pressure on the market, while the reward potential of operating a node reduces sell pressure on the market.",
       "note": ""
     }
   },
@@ -2260,15 +2260,15 @@
       "note": ""
     }
   },
-  "When accepting an order on Scalaris DX, a static fee of 0.015 BLOCK is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.": {
+  "When accepting an order on Scalaris DX, a static fee of 0.015 SCA is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.": {
     "informationWindowFees": {
-      "val": "When accepting an order on Scalaris DX, a static fee of 0.015 BLOCK is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.",
+      "val": "When accepting an order on Scalaris DX, a static fee of 0.015 SCA is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.",
       "note": ""
     }
   },
-  "In addition to the 0.015 BLOCK fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.": {
+  "In addition to the 0.015 SCA fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.": {
     "informationWindowFees": {
-      "val": "In addition to the 0.015 BLOCK fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.",
+      "val": "In addition to the 0.015 SCA fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.",
       "note": ""
     }
   },
@@ -2344,9 +2344,9 @@
       "note": ""
     }
   },
-  "If you are taking an order where you are selling BLOCK, you need at least 1 or more inputs (UTXOs) to cover the amount of BLOCK being sold and 1 or more inputs (UTXOs) to cover the BLOCK trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.": {
+  "If you are taking an order where you are selling SCA, you need at least 1 or more inputs (UTXOs) to cover the amount of SCA being sold and 1 or more inputs (UTXOs) to cover the SCA trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.": {
     "informationWindowIntroduction": {
-      "val": "If you are taking an order where you are selling BLOCK, you need at least 1 or more inputs (UTXOs) to cover the amount of BLOCK being sold and 1 or more inputs (UTXOs) to cover the BLOCK trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.",
+      "val": "If you are taking an order where you are selling SCA, you need at least 1 or more inputs (UTXOs) to cover the amount of SCA being sold and 1 or more inputs (UTXOs) to cover the SCA trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.",
       "note": ""
     }
   },

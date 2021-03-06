@@ -50,7 +50,7 @@ const renderIntroduction = ({ Localize }) => {
           <div class="section-header-text">${Localize.text('Inputs', 'informationWindowIntroduction')}</div><div class="section-header-line"></div>
         </div>
         <p>
-          ${Localize.text('If you are taking an order where you are selling BLOCK, you need at least 1 or more inputs (UTXOs) to cover the amount of BLOCK being sold and 1 or more inputs (UTXOs) to cover the BLOCK trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.', 'informationWindowIntroduction')}
+          ${Localize.text('If you are taking an order where you are selling SCA, you need at least 1 or more inputs (UTXOs) to cover the amount of SCA being sold and 1 or more inputs (UTXOs) to cover the SCA trade fee. If placing multiple orders, you will need a separate set of inputs (UTXOs) that are not used in the previous orders placed. Splitting of assets (creating inputs) can be done using the Coin Control functionality within the respective wallet.', 'informationWindowIntroduction')}
         </p>
       </div>
       <div class="section">

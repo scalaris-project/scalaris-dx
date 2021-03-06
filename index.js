@@ -94,7 +94,7 @@ const getManifest = () => {
     const filePath = path.join(configurationFilesDirectory, 'manifest-latest.json');
     manifest = fs.readJsonSync(filePath);
   }
-  const blockIdx = manifest.findIndex(t => t.ticker === 'BLOCK');
+  const blockIdx = manifest.findIndex(t => t.ticker === 'SCA');
   const blockDirectories = versionDirectories[0];
   manifest[blockIdx] = Object.assign({}, manifest[blockIdx], {
     conf_name: scalarisConfNames[0],
@@ -1788,7 +1788,7 @@ ipcMain.on('localizeText', (e, key, context, replacers = {}) => {
 });
 
 const autoGenerateAddressesAvailable = () => {
-  return info.version >= 3140100 ? true : false;
+  return info.version >= 1000000 ? true : false;
 };
 ipcMain.on('autoGenerateAddressesAvailable', e => {
   e.returnValue = autoGenerateAddressesAvailable();
@@ -1932,7 +1932,7 @@ ipcMain.on(ipcMainListeners.OPEN_REFUND_NOTIFICATION, async function(e, { title,
     }
 
     if(!port) {
-      port = '41414';
+      port = '42510';
       storage.setItem('port', port);
     }
 
@@ -1973,7 +1973,7 @@ ipcMain.on(ipcMainListeners.OPEN_REFUND_NOTIFICATION, async function(e, { title,
 
     if(info) {
 
-      if(info.version < 4000000) storage.setItem('upgradedToV4', false, true);
+      if(info.version < 1000000) storage.setItem('upgradedToV4', false, true);
 
       // version check
       const versionErr = versionCheck(info.version);
@@ -2064,8 +2064,8 @@ function isTokenPairValid(keyPair) {
 
 // check for version number. Minimum supported scalaris client version
 function versionCheck(version) {
-  if (version < 4030100) {
-    const requiredVersion = '4.3.1';
+  if (version < 1000000) {
+    const requiredVersion = '1.0.0';
     return {
       name: Localize.text('Unsupported Version', 'universal'),
       message: Localize.text('Scalaris DX requires Scalaris wallet version {requiredVersion} or greater.', 'universal', {requiredVersion})

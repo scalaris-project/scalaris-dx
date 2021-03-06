@@ -16,7 +16,7 @@
   <style>
 
     body {
-      background-color: #0e2742;
+      background: linear-gradient(100deg, #546e7a 0%, #54af7a 100%);
       font-family: "Open Sans", sans-serif;
       margin-left: 0;
       margin-right: 0;
@@ -28,7 +28,7 @@
       margin-top: 0;
       margin-bottom: 0;
       padding: 10px 15px;
-      background-color: #172e48;
+      background-color: rgba(0,0,0,0.3);
       letter-spacing: 1px;
     }
     .container {
@@ -45,7 +45,7 @@
       width: 40%;
       max-width: 40%;
       min-width: 40%;
-      background-color: #213d54;
+      background-color: rgba(0, 0, 0, 0.5);
       color: #fff;
       padding: 15px 15px;
       font-weight: 300;
@@ -53,13 +53,13 @@
     }
     .input-group input {
       flex-grow: 1;
-      background-color: #123149;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       padding: 15px 20px;
       font-weight: 300;
       /*font-size: 14px;*/
       border-width: 1px;
-      border-color: #123149;
+      border-color: rgba(0, 0, 0, 0.3);
       border-style: solid;
       outline-width: 0;
     }
@@ -70,19 +70,19 @@
       border-style: solid;
     }
     input[type=text]:disabled {
-      opacity: .35;
+      opacity: .5;
     }
     .dropdown-button {
       position: relative;
       opacity: 1;
       flex-grow: 1;
-      background-color: #123149;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       padding: 15px 20px;
       font-weight: 300;
       /*font-size: 14px;*/
       border-width: 1px;
-      border-color: #123149;
+      border-color: rgba(0, 0, 0, 0.3);
       border-style: solid;
       outline-width: 0;
       cursor: pointer;
@@ -95,7 +95,7 @@
       cursor: default;
     }
     .dropdown-button:hover {
-      background-color: rgba(18, 49, 73, .8);
+      background-color: rgba(0, 0, 0, 0.5);
     }
     input {
       flex-grow: 1;
@@ -123,7 +123,7 @@
       /*width: 100%;*/
       margin: 10px;
       margin-bottom: 0;
-      background-color: #0069ff;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       padding: 15px 20px;
       font-size: 14px;
@@ -136,24 +136,21 @@
       transition: background-color .5s;
     }
     button:hover {
-      background-color: #0054cc;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     button:active {
       outline-width: 0;
     }
     button:disabled {
-      background-color: #0054cc;
+      background-color: rgba(0, 0, 0, 0.5);
       opacity: .8;
       cursor: default;
     }
     button.gray-button {
-      background-color: #ddd;
-      color: #0069ff;
-      opacity: 1;
-      transition: opacity .5s;
+      background-color: rgba(0, 0, 0, 0.3);
     }
     button.gray-button:hover {
-      opacity: .7;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     div.button-container {
       display: flex;
@@ -179,7 +176,7 @@
       width: 200px;
       min-width: 200px;
       padding: 10px 20px;
-      background-color: #172e48;
+      background-color: rgba(0,0,0,0.3);
       overflow-y: auto;
     }
     .col2 {
@@ -224,7 +221,7 @@
       color: #fff;
     }
     .radio-icon {
-      color: #339CFF;
+      color: #FFF;
       margin-right: 10px;
     }
     .main-area {
@@ -255,16 +252,16 @@
     }
 
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(248, 248, 248, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       border: 0;
       border-radius: 3px;
     }
     a.text-link {
-      color: #0ce3ff;
+      color: #FFF;
       opacity: 1;
     }
     a.text-link:hover {
-      color: #0ce3ff;
+      color: #FFF;
       opacity: .8;
     }
     input[type="number"] {
@@ -297,7 +294,7 @@
       min-height: 52px;
     }
     .color-toggle-container a.pricingToggle1 {
-      background-color: #123149;
+      background-color: rgba(0,0,0,0.3);
       flex-basis: 0;
       flex-grow: 1;
       font-size: 16px;
@@ -316,11 +313,11 @@
       /*opacity: .8;*/
     /*}*/
     .color-toggle-container a.pricingToggle1.active {
-      color: #00f4c5;
+      color: #00ff00;
     }
     .color-toggle-container a.pricingToggle2 {
       color: #fff;
-      background-color: #123149;
+      background-color: rgba(0,0,0,0.3);
       flex-basis: 0;
       flex-grow: 1;
       font-size: 16px;
@@ -329,7 +326,7 @@
       text-align: center;
     }
     .color-toggle-container a.pricingToggle2.active {
-      color: #ff725e;
+      color: #ff0000;
     }
     .color-toggle-container .color-bar {
       position: absolute;
@@ -340,13 +337,13 @@
     }
     .color-toggle-container .color-bar.color-bar-left {
       left: 0;
-      background-color: #00f4c5;
+      background-color: #00ff00;
       margin-left: 0;
     }
     .color-toggle-container .color-bar.color-bar-right {
       /*right: 0;*/
       margin-left: 50%;
-      background-color: #ff725e;
+      background-color: #ff0000;
     }
     .pricingInputError {
       border: 1px solid #ed1c24 !important;

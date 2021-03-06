@@ -36,7 +36,7 @@ class ConfController {
     this._storage = storage;
     this._walletConfPatt = /^wallet-confs\/(.+\.conf$)/;
     this._xbridgeConfPatt = /^xbridge-confs\/(.+\.conf$)/;
-    this._manifestPath = 'https://s3.amazonaws.com/blockdxbuilds/blockchainconfig/blockchainconfigfilehashmap.json';
+    this._manifestPath = 'https://raw.githubusercontent.com/scalaris-project/blockchain-configuration-files/master/blockchainconfigfilehashmap.json';
   }
 
   async update() {

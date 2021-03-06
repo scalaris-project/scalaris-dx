@@ -22,7 +22,7 @@ class ExpertSelectSetupType extends RouterView {
 
     const styles = {
       p: 'margin-top:0;padding-top:0;padding-left:10px;padding-right:10px;margin-bottom:20px;',
-      mainArea: 'margin-top:-10px;padding-top:0;background-color:#0e2742;overflow-y:auto;'
+      mainArea: 'margin-top:-10px;padding-top:0;background-color:rgba(0, 0, 0, 0.3);overflow-y:auto;'
     };
 
     let title;

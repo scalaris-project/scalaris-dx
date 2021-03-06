@@ -49,7 +49,7 @@ class SelectWallets extends RouterView {
         .filter(data => data);
       state.set('availableLitewallets', litewallets);
       state.set('selectedLitewallets', Set(litewallets.map(w => w.abbr)));
-      // state.set('selectedLitewallets', Set(litewallets.filter(w => w.abbr !== 'BLOCK').map(w => w.abbr)));
+      // state.set('selectedLitewallets', Set(litewallets.filter(w => w.abbr !== 'SCA').map(w => w.abbr)));
     }
   }
 
@@ -82,7 +82,7 @@ class SelectWallets extends RouterView {
 
     const listItems = items
       .map(i => {
-        if(!configuringLitewallets && !updatingWallets && i.abbr === 'BLOCK') {
+        if(!configuringLitewallets && !updatingWallets && i.abbr === 'SCA') {
           return `<div class="main-area-item" style="cursor:default;opacity:1;"><i class="far fa-check-square radio-icon"></i> ${i.name} (${i.abbr})</div>`;
         } else {
           if(!selected.has(i.abbr)) allChecked = false;
@@ -293,7 +293,7 @@ class SelectWallets extends RouterView {
             password: w.rpcPassword,
             port: w.rpcPort
           }));
-        const block = state.get('wallets').find(w => w.abbr === 'BLOCK');
+        const block = state.get('wallets').find(w => w.abbr === 'SCA');
         putConfs(preppedWallets, block.directory, true);
         const cloudChainsDir = state.get('litewalletConfigDirectory');
         ipcRenderer.send('saveLitewalletConfigDirectory', cloudChainsDir);

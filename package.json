@@ -1,6 +1,6 @@
 {
   "name": "SCALARIS-DX",
-  "version": "1.9.0",
+  "version": "1.0.0",
   "license": "MIT",
   "author": "Scalaris <contact@scalaris.info>",
   "homepage": "https://github.com/scalaris-project/scalaris-dx",
@@ -149,6 +149,7 @@
       }
     },
     "mac": {
+      "sign": false,
       "target": [
         "dmg",
         "zip"

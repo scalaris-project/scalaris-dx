@@ -22,10 +22,10 @@ const renderFees = ({ Localize }) => {
     <div class="section-header-text">${Localize.text('Taker Fee', 'informationWindowFees')}</div><div class="section-header-line"></div>
   </div>
   <p>
-    ${Localize.text('When accepting an order on Scalaris DX, a static fee of 0.015 BLOCK is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.', 'informationWindowFees')}
+    ${Localize.text('When accepting an order on Scalaris DX, a static fee of 0.01 SCA is charged at the time the order is taken. This fee is charged even if a trade is canceled or fails and is meant to discourage malicious behavior on the network.', 'informationWindowFees')}
   </p>
   <p>  
-    ${Localize.text('In addition to the 0.015 BLOCK fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.', 'informationWindowFees')}
+    ${Localize.text('In addition to the 0.01 SCA fee, there is also the network fee of the asset being sold. This is the same type of fee you would incur if sending this asset to another party.', 'informationWindowFees')}
   </p>
 </div>
 

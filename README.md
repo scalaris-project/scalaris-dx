@@ -1,12 +1,12 @@
-![SCALARIS DX](BLOCKDX.png)
+![SCALARIS DX](Scalaris.png)
 
 [Download Scalaris DX](https://github.com/scalaris-project/scalaris-dx/releases/latest) |
 -------------|
 
-SCALARIS DX is a decentralized exchange dApp built on top of the [Scalaris Protocol](https://api.scalaris.info). This repository is maintained by the Scalaris Core Team. We encourage the community to create dApps on top of Scalaris. Please connect with our community on [Discord](https://discord.gg/2e6s7H8). More information about Scalaris can be found on the [Scalaris website](https://scalaris.info) and [documentation portal](https://docs.scalaris.info).
+SCALARIS DX is a decentralized exchange dApp [Protocol API](https://api.scalaris.info). This repository is maintained by the Scalaris Core Team. We encourage the community to create dApps on top of Scalaris. Please connect with our community on [Discord](https://discord.gg/HKbdGANbZA). More information about Scalaris can be found on the [Scalaris website](https://scalaris.info) and [documentation portal](https://docs.scalaris.info).
 
-[Website](https://scalaris.info) | [API](https://api.scalaris.info) | [Documentation](https://docs.scalaris.info) | [Discord](https://discord.gg/2e6s7H8)
--------------|-------------|-------------|-------------
+[Website](https://scalaris.info) | [API](https://api.scalaris.info) | [Documentation](https://docs.scalaris.info) | [Discord](https://discord.gg/HKbdGANbZA) | [Telegram](https://t.me/scalaris_project)
+-------------|-------------|-------------|-------------|-------------
 
 # Dev Instructions
 
@@ -63,7 +63,7 @@ By downloading and using this software, you acknowledge that:
 
 The MIT License (MIT)
 
-Copyright (c) 2018 The Scalaris Developers
+Copyright (c) 2021 The Scalaris Developers
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

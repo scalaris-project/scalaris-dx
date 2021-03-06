@@ -111,7 +111,7 @@ $(document).ready(() => {
 
     let wallets = ipcRenderer.sendSync('getManifest');
     wallets = wallets.map(w => new Wallet(w));
-    const blockIdx = wallets.findIndex(w => w.abbr === 'BLOCK');
+    const blockIdx = wallets.findIndex(w => w.abbr === 'SCA');
     const others = [
       ...wallets.slice(0, blockIdx),
       ...wallets.slice(blockIdx + 1)
@@ -128,7 +128,7 @@ $(document).ready(() => {
     let xbridgeConfPath = ipcRenderer.sendSync('getXbridgeConfPath');
     let xbridgeConf;
     try {
-      if(!xbridgeConfPath) xbridgeConfPath = path.join(wallets.find(w => w.abbr === 'BLOCK').directory, 'xbridge.conf');
+      if(!xbridgeConfPath) xbridgeConfPath = path.join(wallets.find(w => w.abbr === 'SCA').directory, 'xbridge.conf');
       xbridgeConf = fs.readFileSync(xbridgeConfPath, 'utf8');
     } catch(err) {
       handleError(err);

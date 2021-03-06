@@ -203,7 +203,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               ${[...pricingUnits].sort((a, b) => a.localeCompare(b)).map(u => `<div class="js-dropdownMenuItem dropdown-button" data-unit="${u}"><div>${u}</div></div>`).join('')}
             </div>
           `);
@@ -235,7 +235,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               ${[...pricingSources].map(s => `<div class="js-dropdownMenuItem dropdown-button" data-source="${s.id}"><div>${s.text}</div></div>`).join('')}
             </div>
           `);
@@ -387,7 +387,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               <div class="js-dropdownMenuItem dropdown-button" data-showWallet="true"><div>${yesText}</div></div>
               <div class="js-dropdownMenuItem dropdown-button" data-showWallet="false"><div>${noText}</div></div>
             </div>
@@ -425,7 +425,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               <div class="js-dropdownMenuItem dropdown-button" data-showallorders="true"><div>${yesText}</div></div>
               <div class="js-dropdownMenuItem dropdown-button" data-showallorders="false"><div>${noText}</div></div>
             </div>
@@ -466,7 +466,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               <div class="js-dropdownMenuItem dropdown-button" data-autofillAddresses="true"><div>${yesText}</div></div>
               <div class="js-dropdownMenuItem dropdown-button" data-autofillAddresses="false"><div>${noText}</div></div>
             </div>
@@ -503,7 +503,7 @@ $(document).ready(() => {
           $icon.addClass('fa-angle-up');
           $icon.removeClass('fa-angle-down');
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0, 0, 0, 0.5);width:${width}px;max-height:162px;overflow-y:auto;">
               ${locales.map(([code, name]) => `<div class="js-dropdownMenuItem dropdown-button" data-locale="${code}"><div>${code} - ${name}</div></div>`).join('')}
             </div>
           `);

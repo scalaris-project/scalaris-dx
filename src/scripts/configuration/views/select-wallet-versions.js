@@ -120,7 +120,7 @@ class SelectWalletVersions extends RouterView {
               <div class="main-area-item2">
                 <div style="display:flex;flex-direction:row:flex-wrap:nowrap;justify-content:space-between;">
                   <div>${w.name}</div>
-                  <div style="display:${!updatingWallets && w.abbr === 'BLOCK' ? 'none' : 'block'};"><small><a class="js-skipBtn" href="#" data-abbr="${w.abbr}" data-version="${w.version}"><i class="far ${checked ? 'fa-check-square' : 'fa-square'} check-icon" /></a> ${addingWallets ? Localize.text('Add Wallet', 'configurationWindowWalletVersions') : updatingWallets ? Localize.text('Update wallet', 'configurationWindowWalletVersions') : Localize.text('Skip', 'configurationWindowWalletVersions')}</small></div>
+                  <div style="display:${!updatingWallets && w.abbr === 'SCA' ? 'none' : 'block'};"><small><a class="js-skipBtn" href="#" data-abbr="${w.abbr}" data-version="${w.version}"><i class="far ${checked ? 'fa-check-square' : 'fa-square'} check-icon" /></a> ${addingWallets ? Localize.text('Add Wallet', 'configurationWindowWalletVersions') : updatingWallets ? Localize.text('Update wallet', 'configurationWindowWalletVersions') : Localize.text('Skip', 'configurationWindowWalletVersions')}</small></div>
                 </div>
                 <div class="input-group" style="margin-bottom:0;margin-top:10px;">
                   <label style="flex-basis:0;flex-grow:1;">${Localize.text('Wallet Version','configurationWindowWalletVersions')}</label>
@@ -273,7 +273,7 @@ class SelectWalletVersions extends RouterView {
       for(const btn of skipBtns) {
         const $btn = $(btn);
         const abbr = $btn.attr('data-abbr');
-        if(!updatingWallets && abbr === 'BLOCK') continue;
+        if(!updatingWallets && abbr === 'SCA') continue;
         const version = $btn.attr('data-version');
         const $icon = $btn.find('i');
         const checked = $icon.hasClass('fa-check-square');
@@ -352,7 +352,7 @@ class SelectWalletVersions extends RouterView {
           $icon.removeClass('fa-angle-down');
 
           $target.append(`
-            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:#ddd;width:${width}px;max-height:162px;overflow-y:auto;">
+            <div class="js-dropdownMenu" style="z-index:1000;position:absolute;top:${height}px;left:0;background-color:rgba(0,0,0,0.3);width:${width}px;max-height:162px;overflow-y:auto;">
               ${versions.map(v => `<div class="js-dropdownMenuItem dropdown-button" data-version="${v}"><div>${v}</div></div>`).join('')}
             </div>
           `);

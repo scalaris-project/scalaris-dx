@@ -1,15 +1,15 @@
-$bn-green: #00F4C5;
-$bn-red: #FF7F71;
-$bn-blue1: #051937; // background
-$bn-blue2: #172e48; // panel headings
-$bn-blue3: #0f2742; // panel bodies
+$bn-green: #00ff00;
+$bn-red: #ff0000;
+$bn-blue1: linear-gradient(100deg, #546e7a 0%, #54af7a 100%); // background
+$bn-blue2: rgba(0, 0, 0, 0.3); // panel headings
+$bn-blue3: rgba(0, 0, 0, 0.3); // panel bodies
 $bn-blue-light: #4794FF;  // sort icon
-$bn-blue-light1: #006AFF; // buttons, primary/nudge
-$bn-blue-light2: #0055CC; // not used
-$bn-blue-light3: #70ACFF; // active tab, refresh/expand symbol hover color
-$bn-blue-light4: #133049; // input background, pair select scroll section background
-$bn-blue-light5: #1e3a52; // pair selector header and tab
-$bn-blue-light6: #67B0FB; // menu hover color
+$bn-blue-light1: rgba(0, 0, 0, 0.3); // buttons, primary/nudge
+$bn-blue-light2: rgba(0, 0, 0, 0.5); // not used
+$bn-blue-light3: #FFF; // active tab, refresh/expand symbol hover color
+$bn-blue-light4: rgba(0, 0, 0, 0.3); // input background, pair select scroll section background
+$bn-blue-light5: rgba(0, 0, 0, 0.5); // pair selector header and tab
+$bn-blue-light6: rgba(0, 0, 0, 0.5); // menu hover color
 $bn-blue-light7: #ADCFFF; // order form type select
 
 $open-sans: 'Open Sans', sans-serif;

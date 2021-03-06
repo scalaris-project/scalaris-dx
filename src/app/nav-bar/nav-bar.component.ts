@@ -113,7 +113,7 @@ export class NavBarComponent implements OnInit {
     const { openExternal } = window.electron.remote.shell;
     switch(name) {
       case 'twitter':
-        openExternal('https://twitter.com/The_Blocknet/');
+        openExternal('https://twitter.com/scalarisproject/');
         break;
       case 'api':
         openExternal('https://api.scalaris.info/#xbridge-api');
@@ -131,10 +131,13 @@ export class NavBarComponent implements OnInit {
         openExternal('https://docs.scalaris.info/');
         break;
       case 'community':
-        openExternal('https://discord.gg/2e6s7H8');
+        openExternal('https://discord.gg/HKbdGANbZA');
         break;
       case 'discord':
-        openExternal('https://discord.gg/2e6s7H8');
+        openExternal('https://discord.gg/HKbdGANbZA');
+        break;
+	  case 'telegram':
+        openExternal('https://t.me/scalaris_project');
         break;
     }
     this.toggleNav();

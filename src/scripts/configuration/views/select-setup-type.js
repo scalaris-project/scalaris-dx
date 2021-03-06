@@ -25,7 +25,7 @@ class SelectSetupType extends RouterView {
       p: 'margin-top:0;padding-top:0;padding-left:10px;padding-right:10px;margin-bottom:20px;',
       flexContainer: 'display:flex;flex-direction:row;flex-wrap:no-wrap;justify-content:flex-start;',
       flexCol1: 'width: 30px;',
-      mainArea: 'margin-top:-10px;padding-top:0;background-color:#0e2742;overflow-y:auto;'
+      mainArea: 'margin-top:-10px;padding-top:0;background-color:rgba(0, 0, 0, 0.3);overflow-y:auto;'
     };
 
     let title;
@@ -138,7 +138,7 @@ class SelectSetupType extends RouterView {
       if(state.get('quickSetup')) {
         const newWallets = wallets
           .map(w => {
-            if(configurationType === configurationTypes.ADD_NEW_WALLETS && w.abbr === 'BLOCK') {
+            if(configurationType === configurationTypes.ADD_NEW_WALLETS && w.abbr === 'SCA') {
               // it will use custom Scalaris directory if one has been previously set, otherwise it will fall back to the default directory
               return w.set('directory', w.getCustomDirectory());
             } else {
@@ -146,7 +146,7 @@ class SelectSetupType extends RouterView {
             }
           });
         state.set('wallets', newWallets);
-        const scalarisWallet = newWallets.find(w => w.abbr === 'BLOCK');
+        const scalarisWallet = newWallets.find(w => w.abbr === 'SCA');
         const dir = scalarisWallet.directory;
         try {
           fs.statSync(dir);

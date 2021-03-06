@@ -6,12 +6,12 @@
 
 <app-bn-tab-view #tabView
   (onTabChange)="onTabChange($event)">
-  <bn-tab label="{{Localize.text('Buy {token}', 'orderform', {token: symbols[0]})}}" barColor="#4BF5C6">
+  <bn-tab label="{{Localize.text('Buy {token}', 'orderform', {token: symbols[0]})}}" barColor="#00ff00">
     <ng-template #content>
       <ng-container *ngTemplateOutlet="formTemplate; context: {type: 'buy'}"></ng-container>
     </ng-template>
   </bn-tab>
-  <bn-tab label="{{Localize.text('Sell {token}', 'orderform', {token: symbols[0]})}}" barColor="#FB7F70">
+  <bn-tab label="{{Localize.text('Sell {token}', 'orderform', {token: symbols[0]})}}" barColor="#ff0000">
     <ng-template #content>
       <ng-container *ngTemplateOutlet="formTemplate; context: {type: 'sell'}"></ng-container>
     </ng-template>

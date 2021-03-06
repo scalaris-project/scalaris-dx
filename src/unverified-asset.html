@@ -15,7 +15,7 @@
   <style>
 
     body {
-      background-color: #0e2742;
+      background: linear-gradient(100deg, #546e7a 0%, #54af7a 100%);
       font-family: "Open Sans", sans-serif;
       margin-left: 0;
       margin-right: 0;
@@ -27,7 +27,7 @@
       margin-top: 0;
       margin-bottom: 0;
       padding: 10px 15px;
-      background-color: #172e48;
+      background-color: rgba(0, 0, 0, 0.3);
       letter-spacing: 1px;
     }
     .container {
@@ -92,7 +92,7 @@
       /*flex-basis: 1;*/
       /*width: 100%;*/
       margin: 10px;
-      background-color: #0069ff;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       padding: 15px 20px;
       font-size: 14px;
@@ -105,24 +105,21 @@
       transition: background-color .5s;
     }
     button:hover {
-      background-color: #0054cc;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     button:active {
       outline-width: 0;
     }
     button:disabled {
-      background-color: #0054cc;
+      background-color: rgba(0, 0, 0, 0.5);
       opacity: .8;
       cursor: default;
     }
     button.gray-button {
-      background-color: #ddd;
-      color: #0069ff;
-      opacity: 1;
-      transition: opacity .5s;
+      background-color: rgba(0, 0, 0, 0.3);
     }
     button.gray-button:hover {
-      opacity: .7;
+      background-color: rgba(0, 0, 0, 0.5);
     }
     div.button-container {
       display: flex;
@@ -175,7 +172,7 @@
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     }
     ::-webkit-scrollbar-thumb {
-      background-color: rgba(248, 248, 248, 0.5);
+      background-color: rgba(0, 0, 0, 0.5);
       border: 0;
       border-radius: 3px;
     }

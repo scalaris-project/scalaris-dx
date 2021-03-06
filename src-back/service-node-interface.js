@@ -50,7 +50,7 @@ Errors['dxTakeOrder'][1020] = () => Localize.text('Unable to take order due to u
 Errors['dxTakeOrder'][1021] = () => Localize.text('Unable to take order. Please make sure the order ID is valid.', 'rpcError');
 Errors['dxTakeOrder'][1026] = () => Localize.text('Unable to take order. Please make sure a valid address is being used and the wallets of the assets being traded are open, synced, and unlocked.', 'rpcError');
 Errors['dxTakeOrder'][1027] = () => Localize.text('Unable to take order due to invalid transaction signature. Please try again or use a different address.', 'rpcError');
-Errors['dxTakeOrder'][1031] = () => Localize.text('Unable to take order due to insufficient funds. Please make sure there are enough *available* BLOCK UTXOS/inputs to cover the fee amount.', 'rpcError');
+Errors['dxTakeOrder'][1031] = () => Localize.text('Unable to take order due to insufficient funds. Please make sure there are enough *available* SCA UTXOS/inputs to cover the fee amount.', 'rpcError');
 
 // dxCancelOrder
 Errors['dxCancelOrder'][1002] = () => Localize.text('Unable to connect to the Scalaris wallet. Please make sure the wallet is open, synced, and unlocked.', 'rpcError');
@@ -341,7 +341,7 @@ class ServiceNodeInterface {
    * Constructs a service node interface instance.
    * @param {string} user - service node user
    * @param {string} password - service node password
-   * @param {string} endpoint - location of service node e.g. http://localhost:41414
+   * @param {string} endpoint - location of service node e.g. http://localhost:42510
    */
   constructor(user, password, endpoint) {
     this._user = user;

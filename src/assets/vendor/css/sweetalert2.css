@@ -448,7 +448,7 @@ body.swal2-no-backdrop .swal2-shown {
   max-width: 100%;
   padding: 1.25em;
   border-radius: 0px;
-  background: #243b55;
+  background: rgba(0, 0, 0, 0.3);
   font-family: inherit;
   font-size: 1rem;
   box-sizing: border-box; }
@@ -461,7 +461,7 @@ body.swal2-no-backdrop .swal2-shown {
     flex-direction: column;
     align-items: center; }
   .swal2-popup .swal2-title {
-    background-color: #243b55;
+    background-color: rgba(0, 0, 0, 0.3);
     display: block;
     position: relative;
     max-width: 100%;
@@ -522,7 +522,7 @@ body.swal2-no-backdrop .swal2-shown {
       border: 0;
       border-radius: 0px;
       background: initial;
-      background-color: #0069ff;
+      background-color: rgba(0, 0, 0, 0.3);
       color: #fff;
       font-size: 1.0625em; }
     .swal2-popup .swal2-styled.swal2-cancel {
@@ -559,7 +559,7 @@ body.swal2-no-backdrop .swal2-shown {
     border: none;
     border-radius: 0;
     background: transparent;
-    color: #243b55;
+    color: rgba(0, 0, 0, 0.3);
     font-family: "Open Sans", sans-serif;
     font-size: 2.5em;
     line-height: 1.2;
@@ -567,7 +567,7 @@ body.swal2-no-backdrop .swal2-shown {
     overflow: hidden; }
     .swal2-popup .swal2-close:hover {
       transform: none;
-      color: #f27474; }
+      color: rgba(0, 0, 0, 0.3); }
   .swal2-popup > .swal2-input,
   .swal2-popup > .swal2-file,
   .swal2-popup > .swal2-textarea,

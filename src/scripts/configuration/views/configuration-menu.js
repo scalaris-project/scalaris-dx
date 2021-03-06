@@ -25,7 +25,7 @@ class ConfigurationMenu extends RouterView {
       p: 'margin-top:0;padding-top:0;padding-left:10px;padding-right:10px;margin-bottom:20px;',
       flexContainer: 'display:flex;flex-direction:row;flex-wrap:no-wrap;justify-content:flex-start;',
       flexCol1: 'width: 30px;min-width:30px;',
-      mainArea: 'margin-top:-10px;padding-top:0;background-color:#0e2742;overflow-y:auto;'
+      mainArea: 'margin-top:-10px;padding-top:0;background-color:rgba(0, 0, 0, 0.3);overflow-y:auto;'
     };
 
     const items = [

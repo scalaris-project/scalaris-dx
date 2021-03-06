@@ -47,7 +47,7 @@ class EnterWalletCredentials extends RouterView {
 
     const styles = {
       p: 'margin-top:0;padding-top:0;padding-left:10px;padding-right:10px;margin-bottom:20px;',
-      mainArea: 'margin-top:-10px;padding-top:0;background-color:#0e2742;overflow-y:auto;'
+      mainArea: 'margin-top:-10px;padding-top:0;background-color:rgba(0, 0, 0, 0.3);overflow-y:auto;'
     };
 
     let title;
@@ -102,7 +102,7 @@ class EnterWalletCredentials extends RouterView {
         .filter(w => selected.has(w.versionId))
         .filter(w => !w.username || !w.password);
       if(incomplete.length > 0) {
-        if(incomplete.some(w => w.abbr === 'BLOCK')) {
+        if(incomplete.some(w => w.abbr === 'SCA')) {
           await swal({
             title: Localize.text('Missing Credentials','configurationWindowWalletCredentials'),
             html: Localize.text('You must enter credentials for {wallet} in order to continue.','configurationWindowWalletCredentials', {wallet: incomplete[0].name}),
