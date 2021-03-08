@@ -3,9 +3,9 @@
 [Download Scalaris DX](https://github.com/scalaris-project/scalaris-dx/releases/latest) |
 -------------|
 
-SCALARIS DX is a decentralized exchange dApp [Protocol API](https://api.scalaris.info). This repository is maintained by the Scalaris Core Team. We encourage the community to create dApps on top of Scalaris. Please connect with our community on [Discord](https://discord.gg/HKbdGANbZA). More information about Scalaris can be found on the [Scalaris website](https://scalaris.info) and [documentation portal](https://docs.scalaris.info).
+SCALARIS DX is a decentralized exchange dApp [Protocol API](https://api.scalaris.info). This repository is maintained by the Scalaris Core Team. We encourage the community to create dApps on top of Scalaris. Please connect with our community on [Discord](https://discord.gg/ZeUMV2kcaQ). More information about Scalaris can be found on the [Scalaris website](https://scalaris.info) and [documentation portal](https://docs.scalaris.info).
 
-[Website](https://scalaris.info) | [API](https://api.scalaris.info) | [Documentation](https://docs.scalaris.info) | [Discord](https://discord.gg/HKbdGANbZA) | [Telegram](https://t.me/scalaris_project)
+[Website](https://scalaris.info) | [API](https://api.scalaris.info) | [Documentation](https://docs.scalaris.info) | [Discord](https://discord.gg/ZeUMV2kcaQ) | [Telegram](https://t.me/scalaris_project)
 -------------|-------------|-------------|-------------|-------------
 
 # Dev Instructions
