@@ -33,7 +33,7 @@ This will build the installer artifacts for the current system (Windows, MacOS, 
 
 ## Pull requests
 
-Please branch off of the branch titled after the next release. For example, if the [latest release](https://github.com/scalaris-project/scalaris-dx/releases/latest) is version 1.4.0 then look for a branch titled 1.4.1, 1.5.0, or 2.0.0.
+Please branch off of the branch titled after the next release. For example, if the [latest release](https://github.com/scalaris-project/scalaris-dx/releases/latest) is version 1.0.0 then look for a branch titled 1.2.0, 1.3.0, or 2.0.0.
 
 ## Running unit tests
 
