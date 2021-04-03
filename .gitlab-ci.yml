@@ -1,6 +1,7 @@
 build_linux:
   stage: build
   image: electronuserland/builder:latest
+  timeout: 30m
   script:
     - |
       echo GIT_BRANCH="$CI_COMMIT_REF_NAME" > electron-builder.env
@@ -9,7 +10,7 @@ build_linux:
       npm install --no-audit
       npm run build-native-linux
   artifacts:
-    name: "BLOCKDX-$CI_COMMIT_REF_NAME-linux"
+    name: "SCALARISDX-$CI_COMMIT_REF_NAME-linux"
     paths:
       - dist-native/*.tar.gz
       - dist-native/*.AppImage
@@ -26,7 +27,7 @@ build_win:
       npm install --no-audit
       npm run build-native-win
   artifacts:
-    name: "BLOCKDX-$CI_COMMIT_REF_NAME-win"
+    name: "SCALARISDX-$CI_COMMIT_REF_NAME-win"
     paths:
       - dist-native/*.exe
       - dist-native/*.zip
@@ -42,18 +43,18 @@ build_mac:
       npm install --no-audit
       npm run build-native-mac
   artifacts:
-    name: "BLOCKDX-$CI_COMMIT_REF_NAME-mac"
+    name: "SCALARISDX-$CI_COMMIT_REF_NAME-mac"
     paths:
-      - dist-native/mac/BLOCK DX.app
+      - dist-native/mac/SCALARIS DX.app
 
 test_artifacts:
   stage: test
   image: ubuntu:bionic
   script:
-    - "set -- dist-native/BLOCK-DX-*-linux-x64.tar.gz && [[ -f \"$1\" ]]"
-    - "set -- dist-native/BLOCK-DX-*-linux-x86_64.AppImage && [[ -f \"$1\" ]]"
-    - "set -- dist-native/BLOCK-DX-*-linux-armv7l.AppImage && [[ -f \"$1\" ]]"
-    - "set -- dist-native/BLOCK-DX-*-linux-amd64.deb && [[ -f \"$1\" ]]"
-    - "set -- dist-native/BLOCK-DX-*-win.exe && [[ -f \"$1\" ]]"
-    - "set -- dist-native/BLOCK-DX-*-win-x64.zip && [[ -f \"$1\" ]]"
-    - "set -- dist-native/mac/BLOCK*DX.app && [[ -d \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-linux-x64.tar.gz && [[ -f \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-linux-x86_64.AppImage && [[ -f \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-linux-armv7l.AppImage && [[ -f \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-linux-amd64.deb && [[ -f \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-win.exe && [[ -f \"$1\" ]]"
+    - "set -- dist-native/SCALARIS-DX-*-win-x64.zip && [[ -f \"$1\" ]]"
+    - "set -- dist-native/mac/SCALARIS*DX.app && [[ -d \"$1\" ]]"

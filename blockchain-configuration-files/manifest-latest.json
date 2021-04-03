@@ -211,7 +211,7 @@
     "dir_name_win": "BCZ",
     "repo_url": "https://github.com/SpecialCoins/bitcoincz",
     "versions": [
-      "6.0.3.2"
+      "6.0.3.3"
     ],
     "xbridge_conf": "bcz--6.0.0.8.conf",
     "wallet_conf": "bcz--6.0.0.8.conf"
@@ -464,7 +464,7 @@
     "dir_name_win": "Dogecoin",
     "repo_url": "https://github.com/dogecoin/dogecoin",
     "versions": [
-      "v1.14.2"
+      "v1.14.3"
     ],
     "xbridge_conf": "dogecoin--v1.10.0.conf",
     "wallet_conf": "dogecoin--v1.10.0.conf"
@@ -1686,6 +1686,23 @@
     ],
     "xbridge_conf": "xcurrency--v3.0.05.conf",
     "wallet_conf": "xcurrency--v3.0.05.conf"
+  },
+  {
+    "blockchain": "Yenten",
+    "ticker": "YTN",
+    "ver_id": "yenten--v4.0.2",
+    "ver_name": "Yenten v4.0.x",
+    "conf_name": "yenten.conf",
+    "dir_name_linux": "yenten",
+    "dir_name_mac": "Yenten",
+    "dir_name_win": "Yenten",
+    "repo_url": "https://github.com/yentencoin/yenten",
+    "versions": [
+      "4.0.1",
+      "4.0.2"
+    ],
+    "xbridge_conf": "yenten--v4.0.2.conf",
+    "wallet_conf": "yenten--v4.0.2.conf"
   },
   {
     "blockchain": "ZCoin",

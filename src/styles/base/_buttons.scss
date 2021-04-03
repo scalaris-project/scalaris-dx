@@ -4,7 +4,7 @@ a, button {
 
 button, .btn, [class^="btn-"], [class*=" btn-"] {
   border: none;
-	background-color: $bn-blue-light1;
+	background-color: rgba(0,255,0,0.5);
   font-family: $open-sans;
   font-size: 12px;
   font-weight: bold;
@@ -21,7 +21,7 @@ button, .btn, [class^="btn-"], [class*=" btn-"] {
   }
 
   &:hover, &:active {
-    background-color: $bn-blue-light2;
+    background-color: rgba(0,255,0,0.6);
   }
 
   &[disabled] {

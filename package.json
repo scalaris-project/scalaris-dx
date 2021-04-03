@@ -15,7 +15,7 @@
       "name": "Ryan Burgett",
       "email": "ryan@burgettweb.net"
     },
-	{
+    {
       "name": "Scalaris Team",
       "email": "scalariscoin@gmail.com"
     }
@@ -193,7 +193,8 @@
       "description": "Copyright © 2021 Scalaris",
       "category": "Utility",
       "desktop": {
-        "Name": "SCALARIS DX"
+        "Name": "SCALARIS DX",
+        "StartupWMClass": "scalaris-dx"
       },
       "publish": {
         "provider": "github",

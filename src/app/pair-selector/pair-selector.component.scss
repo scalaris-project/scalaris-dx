@@ -53,8 +53,8 @@
 
     .navbar-pricing__cell_body::before {
       box-shadow:
-        inset 1px 0 0 $bn-blue-light4,
-        inset -1px 0 0 $bn-blue-light4;
+        inset 1px 0 0 $bn-black-trasparent,
+        inset -1px 0 0 $bn-black-trasparent;
       // transition-duration: 0.1s;
       // transition-delay: 0s;
     }
@@ -125,7 +125,7 @@
   left: 0;
   width: 100%;
   bottom: 0;
-  background-color: $bn-blue-light4;
+  background-color: $bn-black-trasparent;
 	box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
 
   @include screen(lg) {

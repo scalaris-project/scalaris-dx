@@ -130,9 +130,6 @@ export class NavBarComponent implements OnInit {
       case 'resources':
         openExternal('https://docs.scalaris.info/');
         break;
-      case 'community':
-        openExternal('https://discord.gg/ZeUMV2kcaQ');
-        break;
       case 'discord':
         openExternal('https://discord.gg/ZeUMV2kcaQ');
         break;
