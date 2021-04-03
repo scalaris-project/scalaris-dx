@@ -74,7 +74,7 @@ ipcMain.on('getAppVersion', e => {
 let appWindow, serverLocation, sn, keyPair, storage, user, password, port, info, pricingSource, pricingUnit, apiKeys,
   pricingFrequency, enablePricing, sendPricingMultipliers, clearPricingInterval, setPricingInterval,
   sendMarketPricingEnabled, metaPath, availableUpdate, tradeHistory, myOrders, showWallet, tosWindow, releaseNotesWindow,
-  latestScalarisDir, latestConfName;
+  latestBlocknetDir, latestConfName, refreshBalances;
 let updateError = false;
 
 // Handle explicit quit
@@ -300,31 +300,38 @@ const formatDate = isoStr => moment(isoStr).format('HH:mm:ss MMM D, YYYY');
 
 ipcMain.on('openOrderDetailsWindow', async function(e, orderId) {
   const order = await sn.dxGetOrder(orderId);
-  openOrderDetailsWindow([
-    ['ID', order.id],
-    ['Maker', order.maker],
-    ['Maker Size', order.makerSize],
-    ['Taker', order.taker],
-    ['Taker Size', order.takerSize],
-    ['Updated At', formatDate(order.updatedAt)],
-    ['Created At', formatDate(order.createdAt)],
-    ['Status', order.status]
-  ]);
+  const details = [
+    [Localize.text('ID', 'orderDetailsWindow'), order.id],
+    [Localize.text('Maker', 'orderDetailsWindow'), order.maker],
+    [Localize.text('Maker Size', 'orderDetailsWindow'), order.makerSize],
+    [Localize.text('Taker', 'orderDetailsWindow'), order.taker],
+    [Localize.text('Taker Size', 'orderDetailsWindow'), order.takerSize],
+    [Localize.text('Updated At', 'orderDetailsWindow'), formatDate(order.updatedAt)],
+    [Localize.text('Created At', 'orderDetailsWindow'), formatDate(order.createdAt)],
+    [Localize.text('Status', 'orderDetailsWindow'), order.status],
+  ];
+  if(order.orderType === 'partial') {
+    details.splice(3, 0, [Localize.text('Maker Minimum Size', 'orderDetailsWindow'), order.partialMinimum]);
+  }
+  openOrderDetailsWindow(details);
 });
 ipcMain.on('openMyOrderDetailsWindow', async function(e, orderId) {
   const order = myOrders.find(o => o.id === orderId) || {};
   const details = [
-    ['ID', order.id],
-    ['Maker', order.maker],
-    ['Maker Size', order.makerSize],
-    ['Maker Address', order.makerAddress],
-    ['Taker', order.taker],
-    ['Taker Size', order.takerSize],
-    ['Taker Address', order.takerAddress],
-    ['Updated At', formatDate(order.updatedAt)],
-    ['Created At', formatDate(order.createdAt)],
-    ['Status', order.status]
+    [Localize.text('ID', 'orderDetailsWindow'), order.id],
+    [Localize.text('Maker', 'orderDetailsWindow'), order.maker],
+    [Localize.text('Maker Size', 'orderDetailsWindow'), order.makerSize],
+    [Localize.text('Maker Address', 'orderDetailsWindow'), order.makerAddress],
+    [Localize.text('Taker', 'orderDetailsWindow'), order.taker],
+    [Localize.text('Taker Size', 'orderDetailsWindow'), order.takerSize],
+    [Localize.text('Taker Address', 'orderDetailsWindow'), order.takerAddress],
+    [Localize.text('Updated At', 'orderDetailsWindow'), formatDate(order.updatedAt)],
+    [Localize.text('Created At', 'orderDetailsWindow'), formatDate(order.createdAt)],
+    [Localize.text('Status', 'orderDetailsWindow'), order.status]
   ];
+  if(order.orderType === 'partial') {
+    details.splice(3, 0, [Localize.text('Maker Minimum Size', 'orderDetailsWindow'), order.partialMinimum]);
+  }
   openOrderDetailsWindow(details);
 });
 ipcMain.on('openOrderHistoryDetailsWindow', async function(e, orderId) {
@@ -737,6 +744,11 @@ const openSettingsWindow = (options = {}) => {
 
 };
 
+ipcMain.handle('getOrder', async function(e, orderId) {
+  const order = await sn.dxGetOrder(orderId);
+  return order;
+});
+
 ipcMain.on('setTokenPaths', (e, wallets) => {
   let tokenPaths;
   if(wallets) {
@@ -848,7 +860,8 @@ const getShowAllOrdersFromXbridgeConf = () => {
         return false;
       }
     } else { // if it wasn't found in xbridge conf
-      return false;
+      saveShowAllOrders(true);
+      return true;
     }
   } else { // If xbridge conf wasn't found
     return null;
@@ -1074,24 +1087,45 @@ const openAppWindow = () => {
   };
   ipcMain.on('getKeyPair', sendKeyPair);
 
+  const makeOrder = async function(orderFunc) {
+    try {
+      const res = await orderFunc();
+      if(res.id) { // success
+        appWindow.send('orderDone', 'success');
+        sendOrderBook(true);
+      } else {
+        appWindow.send('orderDone', 'failed');
+      }
+    } catch(err) {
+      appWindow.send('orderDone', 'server error');
+      displayError(err);
+    }
+  };
   ipcMain.on('makeOrder', (e, data) => {
-    sn.dxMakeOrder(data.maker, data.makerSize, data.makerAddress, data.taker, data.takerSize, data.takerAddress, data.type)
-      .then(res => {
-        if(res.id) { // success
-          appWindow.send('orderDone', 'success');
-          sendOrderBook(true);
-        } else {
-          appWindow.send('orderDone', 'failed');
-        }
-      })
-      .catch(err => {
-        appWindow.send('orderDone', 'server error');
-        displayError(err);
-      });
+    makeOrder(() => sn.dxMakeOrder(
+      data.maker,
+      data.makerSize,
+      data.makerAddress,
+      data.taker,
+      data.takerSize,
+      data.takerAddress,
+    ));
+  });
+  ipcMain.on('makePartialOrder', (e, data) => {
+    makeOrder(() => sn.dxMakePartialOrder(
+      data.maker,
+      data.makerSize,
+      data.makerAddress,
+      data.taker,
+      data.takerSize,
+      data.takerAddress,
+      data.minimumSize,
+      data.repost,
+    ));
   });
 
   ipcMain.on('takeOrder', (e, data) => {
-    sn.dxTakeOrder(data.id, data.sendAddress, data.receiveAddress)
+    sn.dxTakeOrder(data.id, data.sendAddress, data.receiveAddress, data.amount)
       .then(res => {
         if(res.id) { // success
           appWindow.send('orderDone', 'success');
@@ -1130,17 +1164,25 @@ const openAppWindow = () => {
         if(force === true || JSON.stringify(res) !== JSON.stringify(orderBook)) {
           orderBook = res;
           const allOrders = await getOrders();
-          const orderTotals = new Map(allOrders.map(({ id, makerSize, takerSize }) => [id, [makerSize, takerSize]]));
+          const orderDetails = new Map(allOrders.map(({ id, makerSize, takerSize, partialMinimum, orderType }) => [id, [makerSize, takerSize, partialMinimum, orderType]]));
           const orderBookWithTotals = Object.assign({}, res, {
             asks: res.asks.map(a => {
-              const order = orderTotals.get(a.orderId);
+              const order = orderDetails.get(a.orderId);
               const total = !order ? calculateBackupTotal(a.price, a.size) : a.size === order[0] ? order[1] : order[0];
-              return Object.assign({}, a, {total});
+              return Object.assign({}, a, {
+                total,
+                partialMinimum: order ? order[2] : '',
+                orderType: order ? order[3] : '',
+              });
             }),
             bids: res.bids.map(b => {
-              const order = orderTotals.get(b.orderId);
+              const order = orderDetails.get(b.orderId);
               const total = !order ? calculateBackupTotal(b.price, b.size) : b.size === order[0] ? order[1] : order[0];
-              return Object.assign({}, b, {total});
+              return Object.assign({}, b, {
+                total,
+                partialMinimum: order ? order[2] : '',
+                orderType: order ? order[3] : '',
+              });
             })
           });
           appWindow.send('orderBook', orderBookWithTotals);
@@ -1435,21 +1477,25 @@ const openAppWindow = () => {
 
   let balances = [];
   const sendBalances = async function(force) {
+    let data;
     try {
-      const data = await sn.dxGetTokenBalances();
+      data = await sn.dxGetTokenBalances();
       if(force === true || JSON.stringify(data) !== JSON.stringify(balances)) {
         balances = data;
         appWindow.send('balances', balances);
       }
     } catch(err) {
+      data = [];
       handleError(err);
     }
+    return data;
   };
   ipcMain.on('getBalances', () => sendBalances(true));
+  ipcMain.handle('getBalancesPromise', () => sendBalances(true));
   const sendBalancesInterval = new RecursiveInterval();
   sendBalancesInterval.set(sendBalances, 12000);
 
-  ipcMain.on('refreshBalances', async function() {
+  refreshBalances = async function() {
     try {
       await loadXBridgeConf();
       await sendNetworkTokens();
@@ -1458,6 +1504,9 @@ const openAppWindow = () => {
     } catch(err) {
       handleError(err);
     }
+  };
+  ipcMain.on('refreshBalances', () => {
+    refreshBalances();
   });
 
   sendPricingMultipliers = async function() {
@@ -1812,16 +1861,30 @@ ipcMain.on('generateNewAddress', async function(e, token) {
 
 const generateNewAddresses = async function() {
   try {
-    const selectedWallets = storage.getItem('selectedWallets');
     const addresses = {};
-    const manifest = getManifest()
-      .reduce((map, w) => map.set(w.ver_id, w.ticker), new Map());
-    for(const versionId of selectedWallets) {
+    const split = getSplitXBridgeConf();
+    let selectedWallets;
+    if(split.length > 0) { // If a valid xbridge conf was found
+      const idx = split.findIndex(l => /^ExchangeWallets=/.test(l));
+      if(idx > -1) { // if it has been found in xbridge conf
+        const splitValue = split[idx].split('=');
+        if(splitValue.length > 1) {
+          selectedWallets = splitValue[1]
+            .trim()
+            .split(',')
+            .map(s => s.trim());
+        }
+      } else { // if it wasn't found in xbridge conf
+        selectedWallets = [];
+      }
+    } else { // If xbridge conf wasn't found
+      selectedWallets = [];
+    }
+    for(const token of _.uniq(selectedWallets)) {
       try {
-        const token = manifest.get(versionId);
         const address = await sn.dxGetNewTokenAddress(token);
-        if(address) addresses[token] = address;
-      } catch(err) {
+        if (address) addresses[token] = address;
+      } catch (err) {
         // silently handle errors
         handleError(err);
       }
@@ -1907,7 +1970,7 @@ ipcMain.on(ipcMainListeners.OPEN_REFUND_NOTIFICATION, async function(e, { title,
     }
     enablePricing = storage.getItem('pricingEnabled');
     if(!enablePricing && enablePricing !== false) {
-      enablePricing = true;
+      enablePricing = false;
       storage.setItem('pricingEnabled', enablePricing);
     }
     showWallet = storage.getItem('showWallet');
@@ -2031,8 +2094,14 @@ ipcMain.on(ipcMainListeners.OPEN_REFUND_NOTIFICATION, async function(e, { title,
     }
 
     // Autogenerate new addresses
-    if(autoGenerateAddressesAvailable() && storage.getItem('autofillAddresses')) {
-      await generateNewAddresses();
+    if(autoGenerateAddressesAvailable()) {
+      let autoGenerateAddresses = storage.getItem('autofillAddresses');
+      if(!_.isBoolean(autoGenerateAddresses)) {
+        autoGenerateAddresses = true;
+        storage.setItem('autofillAddresses', autoGenerateAddresses, true);
+      }
+      if(autoGenerateAddresses)
+        await generateNewAddresses();
     }
 
     const localhost = 'localhost';
@@ -2047,6 +2116,13 @@ ipcMain.on(ipcMainListeners.OPEN_REFUND_NOTIFICATION, async function(e, { title,
     checkForUpdates();
 
     openAppWindow();
+
+    setTimeout(() => {
+      // This accounts for if the user opened the Scalaris wallet before XLite.
+      // It forces the Scalaris wallet to reload the xbridge conf and upate
+      // balances after the app window has opened.
+      refreshBalances();
+    }, 1000);
 
   } catch(err) {
     handleError(err);

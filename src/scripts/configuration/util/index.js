@@ -119,7 +119,8 @@ class XBridgeConf {
       [
         '[Main]',
         `ExchangeWallets=${[...this._data.keys()].join(',')}`,
-        'FullLog=true'
+        'FullLog=true',
+        'ShowAllOrders=true'
       ].join('\n'),
       '\n',
       ...[...this._data.entries()]
@@ -191,7 +192,7 @@ const updateXBridgeConf = (wallets, blockDir) => {
   fs.writeFileSync(confPath, joined, 'utf8');
 };
 
-const addToXBridgeConf = (wallets, blockDir) => {
+const putToXBridgeConf = (wallets, blockDir) => {
   const data = new Map();
   for(const wallet of wallets) {
     const { abbr, xBridgeConf, username, password } = wallet;
@@ -235,7 +236,7 @@ module.exports.saveConfs = wallets => {
   return confs;
 };
 
-const putToXBridgeConf = (wallets, blockDir) => {
+const addToXBridgeConf = (wallets, blockDir) => {
   const data = new Map();
   for(const wallet of wallets) {
     const { abbr, xBridgeConf, username, password } = wallet;
