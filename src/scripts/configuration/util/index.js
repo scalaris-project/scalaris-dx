@@ -192,7 +192,7 @@ const updateXBridgeConf = (wallets, blockDir) => {
   fs.writeFileSync(confPath, joined, 'utf8');
 };
 
-const putToXBridgeConf = (wallets, blockDir) => {
+const addToXBridgeConf = (wallets, blockDir) => {
   const data = new Map();
   for(const wallet of wallets) {
     const { abbr, xBridgeConf, username, password } = wallet;
@@ -210,8 +210,9 @@ const putToXBridgeConf = (wallets, blockDir) => {
   let split = bridgeConf
     .replace(/\r/g, '')
     .split(/\n/);
-  const walletsIdx = split.findIndex(s => /^ExchangeWallets\s*=/.test(s));
-  const existingWalletList = new Set(split[walletsIdx].trim().split(','));
+  const exchangeWalletsPatt = /^ExchangeWallets\s*=(.*)/;
+  const walletsIdx = split.findIndex(s => exchangeWalletsPatt.test(s));
+  const existingWalletList = new Set(split[walletsIdx].match(exchangeWalletsPatt)[1].trim().split(',').map(s => s.trim()).filter(s => s));
   const newWalletList = new Set([...data.keys(), ...existingWalletList]);
   newWalletList.delete(''); // Remove empty
   split[walletsIdx] = `ExchangeWallets=${[...newWalletList.values()].join(',')}`;
@@ -236,7 +237,7 @@ module.exports.saveConfs = wallets => {
   return confs;
 };
 
-const addToXBridgeConf = (wallets, blockDir) => {
+const putToXBridgeConf = (wallets, blockDir) => {
   const data = new Map();
   for(const wallet of wallets) {
     const { abbr, xBridgeConf, username, password } = wallet;
